@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.smartystreets.com/street-address?auth-id=AUTH-ID&auth-token=AUTH-TOKEN&city=San%20Francisc&secondary=Floor%205&state=C&street=114%20Sansome%20Street&zipcode=9410
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 10 Jun 2016 14:19:17 GMT
+      Content-Length:
+      - '3'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        []
+    http_version: 
+  recorded_at: Fri, 10 Jun 2016 14:19:17 GMT
+recorded_with: VCR 2.5.0

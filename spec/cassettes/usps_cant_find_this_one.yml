@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.smartystreets.com/street-address?auth-id=AUTH-ID&auth-token=AUTH-TOKEN&city=Chicago&secondary=Floor%2012&state=IL&street=8%20S%20Michigan%20Ave&zipcode=60603
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 10 Jun 2016 09:30:15 GMT
+      Content-Length:
+      - '932'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        [{"input_index":0,"candidate_index":0,"delivery_line_1":"8 S Michigan Ave Fl 12","last_line":"Chicago IL 60603-3357","delivery_point_barcode":"606033357999","components":{"primary_number":"8","street_predirection":"S","street_name":"Michigan","street_suffix":"Ave","secondary_number":"12","secondary_designator":"Fl","city_name":"Chicago","state_abbreviation":"IL","zipcode":"60603","plus4_code":"3357","delivery_point":"99","delivery_point_check_digit":"9"},"metadata":{"record_type":"H","zip_type":"Standard","county_fips":"17031","county_name":"Cook","carrier_route":"C006","congressional_district":"07","building_default_indicator":"Y","rdi":"Commercial","elot_sequence":"0002","elot_sort":"D","latitude":41.88202,"longitude":-87.62438,"precision":"Zip9","time_zone":"Central","utc_offset":-6,"dst":true},"analysis":{"dpv_match_code":"S","dpv_footnotes":"AACC","dpv_cmra":"N","dpv_vacant":"N","active":"Y","footnotes":"N#S#"}}]
+    http_version: 
+  recorded_at: Fri, 10 Jun 2016 09:30:15 GMT
+recorded_with: VCR 2.5.0
