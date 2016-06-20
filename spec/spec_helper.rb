@@ -11,6 +11,7 @@ end
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/cassettes"
+  config.default_cassette_options = { match_requests_on: [:method, :host, :path, :query, :body] }
   config.hook_into :webmock
   config.filter_sensitive_data("AUTH-ID") { CREDENTIALS["auth-id"] }
   config.filter_sensitive_data("AUTH-TOKEN") { CREDENTIALS["auth-token"] }
