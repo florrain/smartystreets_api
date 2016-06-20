@@ -22,8 +22,8 @@ module SmartyStreetsApi
     attr_accessor :auth_id, :auth_token, :base_url
 
     def initialize
-      @auth_id = "unset_auth_id"
-      @auth_token = "unset_auth_token"
+      @auth_id = "AUTH-ID"
+      @auth_token = "AUTH-TOKEN"
       @base_url = "https://api.smartystreets.com"
     end
 
