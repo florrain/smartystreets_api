@@ -1,6 +1,5 @@
-class SmartyStreetsApi::UsStreetAddress
-  AUTH_ARGS = %w(auth-id auth-token)
-  INPUTS = %w(street street2 secondary city state zipcode lastline addressee urbanization candidates)
+class SmartyStreetsApi::UsStreetAddress < SmartyStreetsApi::ApiClient
+  INPUTS = %w(input_id street street2 secondary city state zipcode lastline addressee urbanization candidates)
   OUTPUT_ADDRESS_LINES = %w(addressee delivery_line_1 delivery_line_2 last_line)
   OUTPUT_ADDRESS_INDEXES = %w(input_id input_index candidate_index delivery_point_barcode)
 
@@ -70,10 +69,6 @@ class SmartyStreetsApi::UsStreetAddress
   end
 
   def self.host
-    SmartyStreetsApi.configuration.base_url
-  end
-
-  def self.auth_args
-    SmartyStreetsApi.configuration.auth_args
+    "https://#{SmartyStreetsApi.configuration.base_url}"
   end
 end

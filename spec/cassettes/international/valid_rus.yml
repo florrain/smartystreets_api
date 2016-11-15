@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://international-street.api.smartystreets.com/verify?address1=%D1%83%D0%BB.%20%D0%A4%D1%83%D1%80%D1%88%D1%82%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F,%20%D0%B4.%2013&auth-id=AUTH-ID&auth-token=AUTH-TOKEN&country=RUS&locality=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&postal_code=191028
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - international-street.api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 14 Nov 2016 17:13:56 GMT
+      Content-Length:
+      - '728'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siYWRkcmVzczEiOiLQn9C10YLQtdGA0LHRg9GA0LMgMTkxMDI4IiwiYWRk
+        cmVzczIiOiLQptC10L3RgtGA0LDQu9GM0L3Ri9C5IiwiYWRkcmVzczMiOiLQ
+        pNGD0YDRiNGC0LDRgtGB0LrQsNGPINCj0LvQuNGG0LAgMTMiLCJjb21wb25l
+        bnRzIjp7InN1cGVyX2FkbWluaXN0cmF0aXZlX2FyZWEiOiLQodC10LLQtdGA
+        0L4t0JfQsNC/0LDQtNC90YvQuSDQpNC10LTQtdGA0LDQu9GM0L3Ri9C5INCe
+        0LrRgNGD0LMiLCJhZG1pbmlzdHJhdGl2ZV9hcmVhIjoi0J/QtdGC0LXRgNCx
+        0YPRgNCzIiwiZGVwZW5kZW50X2xvY2FsaXR5Ijoi0KbQtdC90YLRgNCw0LvR
+        jNC90YvQuSIsImNvdW50cnlfaXNvXzMiOiJSVVMiLCJsb2NhbGl0eSI6ItCf
+        0LXRgtC10YDQsdGD0YDQsyIsInBvc3RhbF9jb2RlIjoiMTkxMDI4IiwicG9z
+        dGFsX2NvZGVfc2hvcnQiOiIxOTEwMjgiLCJwcmVtaXNlIjoiMTMiLCJwcmVt
+        aXNlX251bWJlciI6IjEzIiwidGhvcm91Z2hmYXJlIjoi0KTRg9GA0YjRgtCw
+        0YLRgdC60LDRjyDQo9C70LjRhtCwIiwidGhvcm91Z2hmYXJlX25hbWUiOiLQ
+        pNGD0YDRiNGC0LDRgtGB0LrQsNGPIiwidGhvcm91Z2hmYXJlX3R5cGUiOiLQ
+        o9C70LjRhtCwIn0sIm1ldGFkYXRhIjp7fSwiYW5hbHlzaXMiOnsidmVyaWZp
+        Y2F0aW9uX3N0YXR1cyI6IlZlcmlmaWVkIiwiYWRkcmVzc19wcmVjaXNpb24i
+        OiJQcmVtaXNlIiwibWF4X2FkZHJlc3NfcHJlY2lzaW9uIjoiRGVsaXZlcnlQ
+        b2ludCJ9fV0=
+    http_version: 
+  recorded_at: Mon, 14 Nov 2016 17:13:56 GMT
+recorded_with: VCR 3.0.3

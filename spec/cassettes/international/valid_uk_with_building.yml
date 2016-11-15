@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://international-street.api.smartystreets.com/verify?address1=Ardenham%20Court%20Suite%203604&address2=Oxford%20Road&auth-id=AUTH-ID&auth-token=AUTH-TOKEN&country=GBR&locality=AYLESBURY&organization=Nildram%20Ltd&postal_code=HP19%203EQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - international-street.api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 15 Nov 2016 11:01:01 GMT
+      Content-Length:
+      - '690'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"organization":"Nildram Ltd","address1":"Nildram Ltd","address2":"Suite
+        3604 Ardenham Court","address3":"Oxford Road","address4":"Aylesbury","address5":"HP19
+        3EQ","components":{"administrative_area":"Buckinghamshire","building":"Ardenham
+        Court","country_iso_3":"GBR","locality":"Aylesbury","postal_code":"HP19 3EQ","postal_code_short":"HP19
+        3EQ","thoroughfare":"Oxford Road","thoroughfare_name":"Oxford","thoroughfare_trailing_type":"Road","building_name":"Ardenham","building_trailing_type":"Court","sub_building_type":"Suite","sub_building_number":"3604"},"metadata":{},"analysis":{"verification_status":"Partial","address_precision":"Premise","max_address_precision":"DeliveryPoint"}}]'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 11:01:01 GMT
+recorded_with: VCR 3.0.3

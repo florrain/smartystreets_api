@@ -48,7 +48,7 @@ describe SmartyStreetsApi::Decorators::UsFormat do
   end
 
   it "should decorate correctly a two liner" do
-    VCR.use_cassette("valid") do
+    VCR.use_cassette("us/valid") do
       response = SmartyStreetsApi::UsStreetAddress.get_single(office)
 
       expect(described_class.new.call(response.first)).to eq(decorated_office)
@@ -56,15 +56,15 @@ describe SmartyStreetsApi::Decorators::UsFormat do
   end
 
   it "should not decorate if the address doesn't exist" do
-    VCR.use_cassette("not_found") do
+    VCR.use_cassette("us/not_found") do
       response = SmartyStreetsApi::UsStreetAddress.get_single(not_found)
 
       expect(described_class.new.call(response.first)).to be_nil
     end
   end
 
-  it "should not decorate if the address doesn't exist" do
-    VCR.use_cassette("with_direction") do
+  it "should decorate correctly an address including a direction" do
+    VCR.use_cassette("us/with_direction") do
       response = SmartyStreetsApi::UsStreetAddress.get_single(with_direction)
 
       expect(described_class.new.call(response.first)).to eq(decorated_with_direction)

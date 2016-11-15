@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://international-street.api.smartystreets.com/verify?address1=200%20River%20Tce&auth-id=AUTH-ID&auth-token=AUTH-TOKEN&country=AUS&locality=Kangaroo%20Point&postal_code=QLD%204169
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - international-street.api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 15 Nov 2016 12:51:58 GMT
+      Content-Length:
+      - '521'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"address1":"Ralissa Lodge","address2":"200 River Tce","address3":"Kangaroo
+        Point QLD 4169","components":{"administrative_area":"QLD","building":"Ralissa
+        Lodge","country_iso_3":"AUS","locality":"Kangaroo Point","postal_code":"4169","postal_code_short":"4169","premise":"200","premise_number":"200","thoroughfare":"River
+        Tce","thoroughfare_name":"River","thoroughfare_trailing_type":"Tce"},"metadata":{},"analysis":{"verification_status":"Verified","address_precision":"Premise","max_address_precision":"DeliveryPoint"}}]'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 12:51:58 GMT
+- request:
+    method: get
+    uri: https://international-street.api.smartystreets.com/verify?address1=200%20River%20Tce&auth-id=AUTH-ID&auth-token=AUTH-TOKEN&country=AUS&locality=Kangaroo%20Point&postal_code=QLD%204169
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - international-street.api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 15 Nov 2016 12:51:59 GMT
+      Content-Length:
+      - '521'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"address1":"Ralissa Lodge","address2":"200 River Tce","address3":"Kangaroo
+        Point QLD 4169","components":{"administrative_area":"QLD","building":"Ralissa
+        Lodge","country_iso_3":"AUS","locality":"Kangaroo Point","postal_code":"4169","postal_code_short":"4169","premise":"200","premise_number":"200","thoroughfare":"River
+        Tce","thoroughfare_name":"River","thoroughfare_trailing_type":"Tce"},"metadata":{},"analysis":{"verification_status":"Verified","address_precision":"Premise","max_address_precision":"DeliveryPoint"}}]'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 12:51:59 GMT
+recorded_with: VCR 3.0.3

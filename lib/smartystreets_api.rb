@@ -24,7 +24,7 @@ module SmartyStreetsApi
     def initialize
       @auth_id = "AUTH-ID"
       @auth_token = "AUTH-TOKEN"
-      @base_url = "https://api.smartystreets.com"
+      @base_url = "api.smartystreets.com"
     end
 
     def auth_args
@@ -38,5 +38,9 @@ end
 
 require "smartystreets_api/monkey_patches"
 require "smartystreets_api/exceptions"
+require "smartystreets_api/decorators/base_decorator"
 require "smartystreets_api/decorators/us_format"
+require "smartystreets_api/decorators/international_format"
+require "smartystreets_api/api_client"
 require "smartystreets_api/us_street_address"
+require "smartystreets_api/international_street_address"
