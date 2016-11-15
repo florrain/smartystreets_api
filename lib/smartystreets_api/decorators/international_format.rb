@@ -25,9 +25,7 @@ class SmartyStreetsApi::Decorators::InternationalFormat < SmartyStreetsApi::Deco
   end
 
   def address1
-    [
-      :building
-    ]
+    [:building]
   end
 
   def address2
@@ -38,7 +36,12 @@ class SmartyStreetsApi::Decorators::InternationalFormat < SmartyStreetsApi::Deco
   end
 
   def address3
-    [:sub_building_name, :sub_building_type, :sub_building_number, :post_box]
+    [
+      :sub_building_name,
+      :sub_building_type,
+      :sub_building_number,
+      :post_box
+    ]
   end
 
   def locality
