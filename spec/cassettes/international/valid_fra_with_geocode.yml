@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://international-street.api.smartystreets.com/verify?address1=55%20Rue%20du%20Faubourg%20Saint-Honor%C3%A9&auth-id=AUTH-ID&auth-token=AUTH-TOKEN&country=FRA&geocode=true&locality=Paris&postal_code=75008
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - international-street.api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 02 Jan 2017 00:25:46 GMT
+      Content-Length:
+      - '724'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siYWRkcmVzczEiOiI1NSBSdWUgRHUgRmF1Ym91cmcgU2FpbnQtSG9ub3LD
+        qSIsImFkZHJlc3MyIjoiOEUgQXJyb25kaXNzZW1lbnQiLCJhZGRyZXNzMyI6
+        Ijc1MDA4IFBhcmlzIiwiY29tcG9uZW50cyI6eyJzdXBlcl9hZG1pbmlzdHJh
+        dGl2ZV9hcmVhIjoiw45sZS1EZS1GcmFuY2UiLCJhZG1pbmlzdHJhdGl2ZV9h
+        cmVhIjoiUGFyaXMiLCJkZXBlbmRlbnRfbG9jYWxpdHkiOiI4RSBBcnJvbmRp
+        c3NlbWVudCIsImNvdW50cnlfaXNvXzMiOiJGUkEiLCJsb2NhbGl0eSI6IlBh
+        cmlzIiwicG9zdGFsX2NvZGUiOiI3NTAwOCIsInBvc3RhbF9jb2RlX3Nob3J0
+        IjoiNzUwMDgiLCJwcmVtaXNlIjoiNTUiLCJwcmVtaXNlX251bWJlciI6IjU1
+        IiwidGhvcm91Z2hmYXJlIjoiUnVlIER1IEZhdWJvdXJnIFNhaW50LUhvbm9y
+        w6kiLCJ0aG9yb3VnaGZhcmVfbmFtZSI6IkZhdWJvdXJnIFNhaW50LUhvbm9y
+        w6kiLCJ0aG9yb3VnaGZhcmVfdHlwZSI6IlJ1ZSBEdSJ9LCJtZXRhZGF0YSI6
+        eyJsYXRpdHVkZSI6NDguODcwNzEsImxvbmdpdHVkZSI6Mi4zMTY5MiwiZ2Vv
+        Y29kZV9wcmVjaXNpb24iOiJQcmVtaXNlIiwibWF4X2dlb2NvZGVfcHJlY2lz
+        aW9uIjoiRGVsaXZlcnlQb2ludCJ9LCJhbmFseXNpcyI6eyJ2ZXJpZmljYXRp
+        b25fc3RhdHVzIjoiVmVyaWZpZWQiLCJhZGRyZXNzX3ByZWNpc2lvbiI6IlBy
+        ZW1pc2UiLCJtYXhfYWRkcmVzc19wcmVjaXNpb24iOiJEZWxpdmVyeVBvaW50
+        In19XQ==
+    http_version: 
+  recorded_at: Mon, 02 Jan 2017 00:23:43 GMT
+recorded_with: VCR 3.0.3
