@@ -37,5 +37,6 @@ module SmartyStreetsApi
 end
 
 require "smartystreets_api/monkey_patches"
+require "smartystreets_api/exceptions"
 require "smartystreets_api/decorators/us_format"
 require "smartystreets_api/us_street_address"

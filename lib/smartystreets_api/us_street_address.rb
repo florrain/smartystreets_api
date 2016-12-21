@@ -13,17 +13,17 @@ class SmartyStreetsApi::UsStreetAddress
 
     response = Net::HTTP.get_response(uri)
 
+    raise_error!(response.code) if severe_error?(response.code)
+
     parse(response)
   end
 
   private
 
   def self.parse(response)
-    parsed_response = JSON.parse(response.body)
+    json_response = JSON.parse(response.body)
 
-    raise_error!(parsed_response) if severe_error?(response.code)
-
-    parse_response(parsed_response)
+    parse_response(json_response)
   end
 
   def self.parse_response(response)
@@ -51,20 +51,22 @@ class SmartyStreetsApi::UsStreetAddress
   end
 
   def self.raise_error!(response_status_code)
-    case response_status_code
+    reason = case response_status_code
     when 401
-      raise "SmartyStreets - Unauthorized"
+      "Unauthorized"
     when 402
-      raise "SmartyStreets - Payment Required"
+      "Payment Required"
     when 413
-      raise "SmartyStreets - Request Entity Too Large"
+      "Request Entity Too Large"
     when 400
-      raise "SmartyStreets - Bad Request (Malformed Payload)"
+      "Bad Request (Malformed Payload)"
     when 429
-      raise "SmartyStreets - Too Many Requests"
+      "Too Many Requests"
     else
-      raise "SmartyStreets - Unknown error"
+      "Unknown error: #{response_status_code}"
     end
+
+    raise SmartyStreetsApi::Exceptions::SevereApiError.new(reason)
   end
 
   def self.host

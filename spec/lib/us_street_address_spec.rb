@@ -32,5 +32,14 @@ describe SmartyStreetsApi::UsStreetAddress do
         expect(described_class.get_single(chicago_address)[0][:analysis][:dpv_match_code]).to eq("S")
       end
     end
+
+    it "should raise an exception when the response is not successful" do
+      double_response = double("HTTP Response", code: 402)
+      allow(Net::HTTP).to receive(:get_response).and_return(double_response)
+
+      expect {
+        described_class.get_single(chicago_address)
+      }.to raise_error(SmartyStreetsApi::Exceptions::SevereApiError)
+    end
   end
 end
