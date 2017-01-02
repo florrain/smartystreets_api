@@ -3,7 +3,7 @@ class SmartyStreetsApi::ApiClient
     uri = URI(endpoint)
 
     args = options.select do |name, value|
-      whitelisted_input_fields.include?(name.to_s) && (value && !value.empty?)
+      whitelisted_input_fields.include?(name.to_s)
     end.merge!(auth_args)
 
     uri.query = URI.encode_www_form(args)

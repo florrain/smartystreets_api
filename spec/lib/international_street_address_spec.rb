@@ -17,6 +17,15 @@ describe SmartyStreetsApi::InternationalStreetAddress do
       postal_code: "191028"
     }
   end
+  let(:fra_address) do
+    {
+      country: "FRA",
+      address1: "55 Rue du Faubourg Saint-Honoré",
+      locality: "Paris",
+      postal_code: "75008",
+      geocode: true
+    }
+  end
 
   it "should find a valid Australian address" do
     VCR.use_cassette("international/valid_aus") do
@@ -25,6 +34,19 @@ describe SmartyStreetsApi::InternationalStreetAddress do
           verification_status: "Verified",
           address_precision: "Premise",
           max_address_precision: "DeliveryPoint"
+        }
+      )
+    end
+  end
+
+  it "should find the address and return the longitude and latitude along to it" do
+    VCR.use_cassette("international/valid_fra_with_geocode") do
+      expect(described_class.get_single(fra_address)[0][:metadata]).to eq(
+        {
+          latitude: 48.87071,
+          longitude: 2.31692,
+          geocode_precision: "Premise",
+          max_geocode_precision: "DeliveryPoint"
         }
       )
     end
