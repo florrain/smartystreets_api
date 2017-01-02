@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2017-01-02
+### Changed
+- Fix the comparison of the response HTTP code to pass the proper error message to the SevereApiError.
+
 ## [0.1.1] - 2016-12-21
 ### Changed
 - Raise a `SevereApiError` when an API exception happens
