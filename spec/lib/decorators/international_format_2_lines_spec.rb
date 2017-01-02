@@ -17,7 +17,8 @@ describe SmartyStreetsApi::Decorators::InternationalFormat2Lines do
       address2: nil,
       administrative_area: "Петербург",
       locality: "Петербург",
-      postal_code: "191028"
+      postal_code: "191028",
+      postal_code_short: "191028"
     }
   end
   let(:uk_address_with_building) do
@@ -38,7 +39,8 @@ describe SmartyStreetsApi::Decorators::InternationalFormat2Lines do
       address2: "Oxford Road Suite 3604",
       administrative_area: "Buckinghamshire",
       locality: "Aylesbury",
-      postal_code: "HP19 3EQ"
+      postal_code: "HP19 3EQ",
+      postal_code_short: "HP19 3EQ"
     }
   end
 

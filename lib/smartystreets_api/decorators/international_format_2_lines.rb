@@ -57,6 +57,10 @@ class SmartyStreetsApi::Decorators::InternationalFormat2Lines < SmartyStreetsApi
   end
 
   def postal_code
+    [:postal_code]
+  end
+
+  def postal_code_short
     [:postal_code_short]
   end
 
