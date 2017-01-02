@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.smartystreets.com/street-address?auth-id=fake&auth-token=fake&city=San%20Francisco&secondary=Floor%205&state=CA&street=114%20Sansome%20Street&zipcode=94104
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.smartystreets.com
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Mon, 02 Jan 2017 10:11:56 GMT
+      Content-Length:
+      - '13'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        Unauthorized
+    http_version: 
+  recorded_at: Mon, 02 Jan 2017 10:09:47 GMT
+recorded_with: VCR 3.0.3

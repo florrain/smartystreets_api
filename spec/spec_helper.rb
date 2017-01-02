@@ -3,6 +3,20 @@ require "smartystreets_api"
 require "vcr"
 require "yaml"
 
+def reset_credentials
+  SmartyStreetsApi.configure do |config|
+    config.auth_id = CREDENTIALS["auth-id"]
+    config.auth_token = CREDENTIALS["auth-token"]
+  end
+end
+
+def fake_credentials
+  SmartyStreetsApi.configure do |config|
+    config.auth_id = "fake"
+    config.auth_token = "fake"
+  end
+end
+
 if File.exist?("#{File.dirname(__FILE__)}/credentials.yml")
   CREDENTIALS = YAML.load_file("#{File.dirname(__FILE__)}/credentials.yml")
 else
@@ -17,7 +31,4 @@ VCR.configure do |config|
   config.filter_sensitive_data("AUTH-TOKEN") { CREDENTIALS["auth-token"] }
 end
 
-SmartyStreetsApi.configure do |config|
-  config.auth_id = CREDENTIALS["auth-id"]
-  config.auth_token = CREDENTIALS["auth-token"]
-end
+reset_credentials
