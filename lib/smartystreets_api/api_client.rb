@@ -48,7 +48,7 @@ class SmartyStreetsApi::ApiClient
   end
 
   def self.raise_error!(response_status_code)
-    case response_status_code.to_i
+    reason = case response_status_code.to_i
     when 401
       "Unauthorized"
     when 402
