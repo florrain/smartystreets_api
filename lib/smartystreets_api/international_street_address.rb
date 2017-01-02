@@ -12,7 +12,8 @@ class SmartyStreetsApi::InternationalStreetAddress < SmartyStreetsApi::ApiClient
       address4
       organization
       locality
-      administrative_area postal_code
+      administrative_area
+      postal_code
     )
   end
 
