@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2017-01-04
+### Added
+- Support for the International Street Address API
+
+### Changed
+- Fix the comparison of the response HTTP code to pass the proper error message to the SevereApiError.
+
 ## [0.1.2] - 2017-01-02
 ### Changed
 - Fix the comparison of the response HTTP code to pass the proper error message to the SevereApiError.
