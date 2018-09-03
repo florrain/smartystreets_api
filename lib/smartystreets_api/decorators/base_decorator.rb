@@ -2,7 +2,7 @@ class SmartyStreetsApi::Decorators::BaseDecorator
   def call(address_object)
     return if !address_object || !address_object[:components]
 
-    self.class.private_instance_methods(false).inject({}) do |decorated_address, attribute|
+    decorated_components = self.class.private_instance_methods(false).inject({}) do |decorated_address, attribute|
       components = self.send(attribute.to_sym)
 
       array_values = components.map do |component_name|
@@ -17,5 +17,9 @@ class SmartyStreetsApi::Decorators::BaseDecorator
 
       decorated_address
     end
+
+    remove_empty_address_lines!(decorated_components)
+
+    decorated_components
   end
 end

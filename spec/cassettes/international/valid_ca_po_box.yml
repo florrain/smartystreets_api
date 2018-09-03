@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://international-street.api.smartystreets.com/verify?address1=PO%20BOX%201&address2&administrative_area=SK&auth-id=AUTH-ID&auth-token=AUTH-TOKEN&country=CAN&locality=Pilger&organization&postal_code=S0K%203G0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - international-street.api.smartystreets.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '467'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 03 Sep 2018 19:19:17 GMT
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"address1":"PO Box 1","address2":"Pilger SK S0K 3G0","components":{"administrative_area":"SK","country_iso_3":"CAN","locality":"Pilger","postal_code":"S0K
+        3G0","postal_code_short":"S0K 3G0","post_box":"PO Box 1","post_box_number":"1","post_box_type":"PO
+        Box"},"metadata":{"address_format":"post_box|locality administrative_area
+        postal_code"},"analysis":{"verification_status":"Verified","address_precision":"DeliveryPoint","max_address_precision":"DeliveryPoint"}}]'
+    http_version: 
+  recorded_at: Mon, 03 Sep 2018 19:19:17 GMT
+recorded_with: VCR 3.0.3
