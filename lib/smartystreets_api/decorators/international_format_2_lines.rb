@@ -4,6 +4,10 @@ class SmartyStreetsApi::Decorators::InternationalFormat2Lines < SmartyStreetsApi
 
     decorated_address[:organization] = address_object[:lines][:organization]
 
+    decorated_address
+  end
+
+  def remove_empty_address_lines!(decorated_address)
     unless decorated_address[:address1]
       decorated_address[:address1] = decorated_address[:address_1_alternative]
       decorated_address[:address2] = decorated_address[:address_2_alternative]
@@ -12,7 +16,10 @@ class SmartyStreetsApi::Decorators::InternationalFormat2Lines < SmartyStreetsApi
     decorated_address.delete(:address_1_alternative)
     decorated_address.delete(:address_2_alternative)
 
-    decorated_address
+    unless decorated_address[:address1]
+      decorated_address[:address1] = decorated_address[:address2]
+      decorated_address[:address2] = nil
+    end
   end
 
   private

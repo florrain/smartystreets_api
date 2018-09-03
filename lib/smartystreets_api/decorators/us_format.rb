@@ -1,4 +1,11 @@
 class SmartyStreetsApi::Decorators::UsFormat < SmartyStreetsApi::Decorators::BaseDecorator
+  def remove_empty_address_lines!(decorated_address)
+    unless decorated_address[:street]
+      decorated_address[:street] = decorated_address[:secondary]
+      decorated_address[:secondary] = nil
+    end
+  end
+
   private
 
   def street
